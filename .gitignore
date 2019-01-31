@@ -328,3 +328,5 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
+SimpleXam.Fundamentals/SimpleXam.Fundamentals.Android/.DS_Store
+SimpleXam.Fundamentals/SimpleXam.Fundamentals.Android/Resources/.DS_Store

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.props" Condition="Exists('$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{904CABA2-D42E-4FFF-A633-83131B2EEDAD}</ProjectGuid>
+    <Description>A collection of simple controls to make Xamarin Forms development easier.</Description>
+    <PackageId>SimpleXam.Fundamentals</PackageId>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Authors>thomasbartleet</Authors>
+    <DevelopmentDependency>false</DevelopmentDependency>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>SimpleXam.Fundamentals</RootNamespace>
+    <UsePartialTypes>false</UsePartialTypes>
+    <AssemblyName>SimpleXam.Fundamentals.NuGet</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <OutputPath>bin\Debug</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SimpleXam.Fundamentals.Android\SimpleXam.Fundamentals.Android.csproj">
+      <Project>{FD78172E-5524-4554-9C29-55F5D252B4E8}</Project>
+      <Name>SimpleXam.Fundamentals.Android</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SimpleXam.Fundamentals.iOS\SimpleXam.Fundamentals.iOS.csproj">
+      <Project>{4475B856-1322-4B90-A0F7-EC3106DFD66E}</Project>
+      <Name>SimpleXam.Fundamentals.iOS</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NuGet.Build.Packaging">
+      <Version>0.2.2</Version>
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
+  <Import Project="$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.targets" Condition="Exists('$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.targets')" />
+</Project>
