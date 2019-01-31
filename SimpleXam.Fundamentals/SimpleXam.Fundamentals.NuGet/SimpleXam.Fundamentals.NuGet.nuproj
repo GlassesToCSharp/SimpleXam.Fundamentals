@@ -16,6 +16,10 @@
     <UsePartialTypes>false</UsePartialTypes>
     <AssemblyName>SimpleXam.Fundamentals.NuGet</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <Owners>Thomas Bartleet</Owners>
+    <Title>SimpleXam.Fundamentals</Title>
+    <PackageProjectUrl>https://github.com/ThomasBartleet/SimpleXam.Fundamentals</PackageProjectUrl>
+    <PackageLicenseUrl>https://spdx.org/licenses/MIT.html</PackageLicenseUrl>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
